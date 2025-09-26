@@ -1,0 +1,693 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Agatha Christie - 小说库</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+      <header>
+      <div class="logo">
+        <img src="images/tubiao.png" alt="Agatha Christie Logo">
+      </div>  
+      <nav>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li class="dropdown">
+              <a href="play.html">游戏库</a >
+              <ul class="dropdown-menu">
+                  <li><a href="play.html#Jigsaw-Puzzles">拼图游戏</a></li>
+                  <li><a href="play.html#puzzlebooks">解谜书</a></li>
+                  <li><a href="play.html#PC">PC和主机游戏</a></li>
+                  <li><a href="play.html#qi-zhi-pai">棋盘游戏和纸牌</a></li>
+              </ul>
+          </li>
+        
+          <li class="dropdown">
+              <a href="detail.html">小说库</a>
+              <ul class="dropdown-menu">
+                  <li><a href="detail.html#Hercule">波洛系列</a></li>
+                  <li><a href="detail.html#MissMarple">马普尔小姐</a></li>
+                  <li><a href="detail.html#Tommy">汤姆与塔彭丝</a></li>
+                  <li><a href="detail.html#Standalone">独立系列</a></li>
+              </ul>
+          </li>
+          
+          <li class="dropdown">
+              <a href="watch.html">流媒体库</a>
+              <ul class="dropdown-menu">
+                  <li><a href="watch.html#now">热映</a></li>
+                  <li><a href="watch.html#willing">即将推出</a></li>
+                  <li><a href="watch.html#production">生产中</a></li>
+                  <li><a href="watch.html#new">最新版本</a></li>
+                  <li><a href="watch.html#20century">20世纪</a></li>
+                  <li><a href="watch.html#world">世界各地</a></li>
+                  <li><a href="watch.html#contemporary">当代科视Christie</a></li>
+                  <li><a href="watch.html#studio">20世纪工作室</a></li>
+                  <li><a href="watch.html#classic">经典科视Christie</a></li>
+              </ul>
+          </li>
+          <li><a href="profile.html">阿加莎详情</a ></li>
+        </ul>
+      </nav>
+    <div class="search-box">
+    <input type="text" placeholder="搜索...">
+    <button>🔍</button>
+  </div>
+      </header>
+  <!--小说库-->
+    <main>
+      <h1>小说库</h1>
+      <!--波洛系列-->
+      <section id="Hercule">
+        <h2>波洛系列
+        <p>Hercule Poirot</p></h2>
+          <h5><i>My name is Hercule Poirot and I am probably the greatest detective in the world.</i>
+          <p></p>
+          <i>——Hercule Poirot - The Mystery of the Blue Train</i>
+          <p></p>
+          <i>我叫赫尔克里·波洛，我可能是世界上最伟大的侦探。</i>
+          <p></p>
+          <i>——赫尔克里·波洛-蓝色火车之谜</i></h5>
+          <P>初次登场于《斯泰尔斯庄园奇案》，主要的出场作品有《东方快车谋杀案》、《尼罗河上的惨案》、《罗杰疑案》、《ABC谋杀案》、《阳光下的罪恶》等。</P>
+          <P>在最后一案《帷幕》中去世，死讯当时被《纽约时报》以头版发布</P>
+          <P>---------------------------------------</P>
+          <!--将小说放入同一个容器-->
+          <div class="book-list">
+          <div class="book" id="novel-1">
+              <img src="images/MurderOnTheOrientExpress_PB.avif" alt="东方快车谋杀案">
+              <p>东方快车谋杀案</p>
+              <button class="read-btn" data-novel-id="1">开始阅读</button>
+            </div>
+            <div class="book" id="novel-2">
+              <img src="images/MysteriousAffairAtStyles_PB.avif" alt="斯泰尔斯庄园奇案">
+              <p>斯泰尔斯庄园奇案</p>
+              <button class="read-btn" data-novel-id="2">开始阅读</button>
+            </div>
+            <div class="book" id="novel-3">
+              <img src="images/Jacket_TheMurderontheLinksUS.avif" alt="链接谋杀案">
+              <p>链接谋杀案</p>
+              <button class="read-btn" data-novel-id="3">开始阅读</button>
+            </div>
+              <div class="book" id="novel-4">
+              <img src="images/BigFour_PB.avif" alt="四大巨头">
+              <p>四大巨头</p>
+              <button class="read-btn" data-novel-id="4">开始阅读</button>
+            </div>
+        <div class="book" id="novel-5">
+              <img src="images/Jacket_TheMysteryofTheBlueTrainUS.avif" alt="蓝色列车的神秘之处">
+              <p>蓝色列车的神秘之处</p>
+              <button class="read-btn" data-novel-id="5">开始阅读</button>
+            </div>
+            <div class="book" id="novel-6">
+              <img src="images/PerilAtEndHouse_PB.avif" alt="末日之家的危险">
+              <p>末日之家的危险</p>
+              <button class="read-btn" data-novel-id="6">开始阅读</button>
+            </div>
+            <div class="book" id="novel-7">
+              <img src="images/LordEdgware_PB.avif" alt="埃奇韦尔勋爵去世">
+              <p>埃奇韦尔勋爵去世</p>
+              <button class="read-btn" data-novel-id="7">开始阅读</button>
+            </div>
+            <div class="book" id="novel-8">
+              <img src="images/ThreeActTragedy_PB.avif" alt="三幕悲剧">
+              <p>三幕悲剧</p>
+              <button class="read-btn" data-novel-id="8">开始阅读</button>
+            </div>
+            <div class="book" id="novel-9">
+              <img src="images/themurderofrogerackroyd.avif" alt="罗杰疑案">
+              <p>罗杰疑案</p>
+              <button class="read-btn" data-novel-id="9">开始阅读</button>
+            </div>
+            <div class="book" id="novel-10">
+              <img src="images/DeathInTheClouds_PB.avif" alt="云中的死亡">
+              <p>云中的死亡</p>
+              <button class="read-btn" data-novel-id="10">开始阅读</button>
+            </div>
+            <div class="book" id="novel-11">
+              <img src="images/CardsOnTheTable_PB.avif" alt="桌上的牌">
+              <p>桌上的牌</p>
+              <button class="read-btn" data-novel-id="11">开始阅读</button>
+            </div>
+            <div class="book" id="novel-12">
+              <img src="images/MurderInMesopotamia_Cover_wFinalArt.avif" alt="美索不达米亚的谋杀案">
+              <p>美索不达米亚的谋杀案</p>
+              <button class="read-btn" data-novel-id="12">开始阅读</button>
+            </div>
+            <div class="book" id="novel-13">
+              <img src="images/ABCMurders_PB.avif" alt="ABC谋杀案">
+              <p>ABC谋杀案</p>
+              <button class="read-btn" data-novel-id="13">开始阅读</button>
+            </div>
+            <div class="book" id="novel-14">
+              <img src="images/deathonthenile.avif" alt="尼罗河上的惨案">
+              <p>尼罗河上的惨案</p>
+              <button class="read-btn" data-novel-id="14">开始阅读</button>
+            </div>
+            <div class="book" id="novel-15">
+              <img src="images/DumbWitness_PBUS.avif" alt="哑巴证人">
+              <p>哑巴证人</p>
+              <button class="read-btn" data-novel-id="15">开始阅读</button>
+            </div>
+            <div class="book" id="novel-16">
+              <img src="images/APPOINTMENT_WITH_DEATH_RevisedArt_42424.avif" alt="与死亡的邂逅">
+              <p>与死亡的邂逅</p>
+              <button class="read-btn" data-novel-id="16">开始阅读</button>
+            </div>
+            <div class="book" id="novel-17">
+              <img src="images/herculepoirot'schristmas.avif" alt="赫尔克里波洛的圣诞节">
+              <p>赫尔克里波洛的圣诞节</p>
+              <button class="read-btn" data-novel-id="17">开始阅读</button>
+            </div>
+            <div class="book" id="novel-18">
+              <img src="images/Evil-Under-the-Sun.avif" alt="阳光下的罪恶">
+              <p>阳光下的罪恶</p>
+              <button class="read-btn" data-novel-id="18">开始阅读</button>
+            </div>
+            <div class="book" id="novel-19">
+              <img src="images/One-Two-Buckle-My-Shoe.avif" alt="一二扣上我的鞋子">
+              <p>yier扣上我的鞋子</p>
+              <button class="read-btn" data-novel-id="19">开始阅读</button>
+            </div>
+            <div class="book" id="novel-20">
+              <img src="images/Sad-Cypress.avif" alt="悲伤的柏树">
+              <p>悲伤的柏树</p>
+              <button class="read-btn" data-novel-id="20">开始阅读</button>
+            </div>
+            <div class="book" id="novel-21">
+              <img src="images/FiveLittlePigs_PB.avif" alt="五只小猪">
+              <p>五只小猪</p>
+              <button class="read-btn" data-novel-id="21">开始阅读</button>
+            </div>
+            <div class="book" id="novel-22">
+              <img src="images/Jacket_TheHollowUS.avif" alt="空心">
+              <p>空心</p>
+              <button class="read-btn" data-novel-id="22">开始阅读</button>
+            </div>
+            <div class="book" id="novel-23">
+              <img src="images/Taken-at-the-Flood.avif" alt="在洪水中拍摄">
+              <p>在洪水中拍摄</p>
+              <button class="read-btn" data-novel-id="23">开始阅读</button>
+            </div>
+            <div class="book" id="novel-24">
+              <img src="images/Mrs-McGintys-Dead.avif" alt="麦金蒂夫人的死">
+              <p>麦金蒂夫人的死</p>
+              <button class="read-btn" data-novel-id="24">开始阅读</button>
+            </div>
+            <div class="book" id="novel-25">
+              <img src="images/After-the-Funeral.avif" alt="葬礼后">
+              <p>葬礼后</p>
+              <button class="read-btn" data-novel-id="25">开始阅读</button>
+            </div>
+            <div class="book" id="novel-26">
+              <img src="images/greenshore-folly.avif" alt="赫尔克里波洛与绿岸的愚蠢">
+              <p>赫尔克里波洛与绿岸的愚蠢</p>
+              <button class="read-btn" data-novel-id="26">开始阅读</button>
+            </div>
+            <div class="book" id="novel-27">
+              <img src="images/Hickory-Dickory-Dock.avif" alt="山核桃帝克利码头">
+              <p>山核桃帝克利码头</p>
+              <button class="read-btn" data-novel-id="27">开始阅读</button>
+            </div>
+            <div class="book" id="novel-28">
+              <img src="images/Dead-Mans-Folly_2025-02-03-093457_vfai.avif" alt="死人的愚蠢">
+              <p>死人的愚蠢</p>
+              <button class="read-btn" data-novel-id="28">开始阅读</button>
+            </div>
+              <div class="book" id="novel-29">
+              <img src="images/Cat-Among-the-Pigeons.avif" alt="鸽子中的猫">
+              <p>鸽子中的猫</p>
+              <button class="read-btn" data-novel-id="29">开始阅读</button>
+            </div>
+              <div class="book" id="novel-30">
+              <img src="images/The-Clocks.avif" alt="时钟">
+              <p>时钟</p>
+              <button class="read-btn" data-novel-id="30">开始阅读</button>
+            </div>
+              <div class="book" id="novel-31">
+              <img src="images/Jacket_ThirdGirl.avif" alt="第三个女孩">
+              <p>第三个女孩</p>
+              <button class="read-btn" data-novel-id="31">开始阅读</button>
+            </div>
+          <div class="book" id="novel-32">
+              <img src="images/Halloween-Part-v2.avif" alt="万圣节派对">
+              <p>万圣节派对</p>
+              <button class="read-btn" data-novel-id="32">开始阅读</button>
+            </div>
+              <div class="book" id="novel-33">
+              <img src="images/Elephants-Can-Remember-v3.avif" alt="大象能记住">
+              <p>大象能记住</p>
+              <button class="read-btn" data-novel-id="33">开始阅读</button>
+            </div>
+            <div class="book" id="novel-34">
+              <img src="images/curtainpoirot'slastcase.avif" alt="帷幕：波洛最后的案件">
+              <p>帷幕：波洛最后的案件</p>
+              <button class="read-btn" data-novel-id="34">开始阅读</button>
+            </div>
+              <div class="book" id="novel-35">
+              <img src="images/Black-Coffee.avif" alt="黑咖啡">
+              <p>黑咖啡</p>
+              <button class="read-btn" data-novel-id="35">开始阅读</button>
+            </div>
+              <div class="book" id="novel-36">
+              <img src="images/monogram-murders.avif" alt="字母组合谋杀案">
+              <p>字母组合谋杀案</p>
+              <button class="read-btn" data-novel-id="36">开始阅读</button>
+            </div>
+              <div class="book" id="novel-37">
+              <img src="images/Jacket_ClosedCasketUS.avif" alt="封闭式棺材">
+              <p>封闭式棺材</p>
+              <button class="read-btn" data-novel-id="37">开始阅读</button>
+            </div>
+              <div class="book" id="novel-38">
+              <img src="images/Mystery-of-Three-Quarters-US-cover-reveal-small.avif" alt="四分之三之谜">
+              <p>四分之三之谜</p>
+              <button class="read-btn" data-novel-id="38">开始阅读</button>
+            </div>
+              <div class="book" id="novel-39">
+              <img src="images/the-killingsatkingfisherhill.avif" alt="翠鸟山的杀戮">
+              <p>翠鸟山的杀戮</p>
+              <button class="read-btn" data-novel-id="39">开始阅读</button>
+            </div>
+              <div class="book" id="novel-40">
+              <img src="images/Hercule-Poirots-Silent-Night-2.avif" alt="赫尔克里波洛的平安夜">
+              <p>赫尔克里波洛的平安夜</p>
+              <button class="read-btn" data-novel-id="40">开始阅读</button>
+            </div>
+              <div class="book" id="novel-41">
+              <img src="images/Jacket_TheLastDeathOfTheYearUS.avif" alt="今年最后的死亡">
+              <p>今年最后的死亡</p>
+              <button class="read-btn" data-novel-id="41">开始阅读</button>
+            </div>
+            </section>
+            <section id="pdf-preview">
+          <h2>波洛系列官方建议阅读顺序</h2>
+          <!--pdf预览图-->
+            <div class="pdf-preview">
+              <img src="images/pdf-the-hercule-poirot-reading1.png" alt="建议阅读顺序 页1">
+              <img src="images/pdf-the-hercule-poirot-reading2.png" alt="建议阅读顺序 页2">
+              <img src="images/pdf-the-hercule-poirot-reading3.png" alt="建议阅读顺序 页3">
+            </div>
+          <!--pdf译文-->
+          <b>以下是译文</b>
+          <p>此译文内容为爱好者为爱发电自译，如有问题请发邮件告知与我们谢谢！</p>
+            <div class="pdf-translations">
+              
+              <div class="trans">
+                <b>赫尔克里波洛阅读清单 英国</b>
+                <p>一个人类心理学家。一个难民和古怪的人。一个世界闻名的私家侦探。赫尔克里·波洛在1920年进入读者的生活，自此以来一直吸引着他们。
+                  我们常常被问到从哪里开始了解比利时侦探。首次阅读你应该选择哪本？应该按照故事的顺序读吗？十大热门阅读清单是哪些？
+                  这个清单将回答你这些问题。 享受赫尔克里·波洛侦探的伟大案件、晚期案件以及他鲜为人知的案件。               
+                </p>
+                <b>十大热门清单:</b>
+                <p></p>
+                <b>托尔斯泰庄园疑案</b>
+                <p></p>
+                <b>罗杰疑案</b>
+                <p></p>
+                <b>东方快车谋杀案</b>
+                <p></p>
+                <b>ABC谋杀案</b>
+                <p></p>
+                <b>尼罗河上的惨案</b>
+                <p></p>
+                <b>赫尔克里波洛的圣诞节</b>
+                <p></p>
+                <b>阳光下的罪恶</b>
+                <p></p>
+                <b>六只小猪</b>
+                <p></p>
+                <b>葬礼后</b>
+                <p></p>
+                <b>波洛最后的案件</b>
+              </div>
+              <div class="trans">
+                <b>——导论|时间清单——</b>
+                <p></p>
+                <b>导论</b>
+                <p>有时候，波洛之前的案件会在其他书籍中被提及。对于那些希望避免剧透的读者，我们有以下建议：如果你打算阅读所有的故事，可以把《帷幕》留到最后。如果你一生中打算阅读10个波洛故事，确保《帷幕》是其中之一。
+                  《记忆中的大象》提到了《五只小猪》、《万圣节派对》和《麦金蒂夫人的死》的情节，所以如果你想找到这些情节，最好先阅读其他三部。《鸽子中的猫》提到了《万圣节派对》中的一个角色。你能找出是谁吗？
+                  《麦金蒂夫人的死》的情节在《万圣节派对》中被讨论，因此在开始阅读后者之前，阅读前者是个好主意。
+                  我们建议在读《桌上的牌》之前先读《东方快车谋杀案》，以避免剧透。如果你首先在阅读《赫尔克里·波洛的圣诞节》，请注意《三幕悲剧》中的剧透。</p>
+                <b>——时间清单——</b>
+                <p>(注意:第三页与第一页仅为书籍封面不同)</p>
+                <b></b>
+                <p>考虑到左侧的指南，可以按任意顺序阅读波洛的故事。如果您想按时间顺序（波洛的生平）考虑它们，我们推荐以下顺序。</p>
+              </div>
+              <div class="trans">
+                <b>时间顺序清单如下:</b>
+                <p>《斯泰尔斯的神秘案件》[1920]《波罗调查》 (SSC) [1924]《波罗的早期案件》 (SSC) [1974]《双重罪与其他故事》 (美国SSC) [1961]《球场杀人案》[1923]《大四》[1927]《罗杰·艾克罗伊德谋杀案》[1926]《底层与其他故事》 (美国SSC) [1951]《蓝色列车之谜》[1928]《在终局家中的危险》[1932]《埃德华勋爵死于此》[1933]《美索不达米亚的谋杀》[1936]《东方快车谋杀案》[1934]《三幕悲剧》[1934]《云中的死亡》[1935]《ABC谋杀案》[1936]《波罗与赛艇之谜》[1936]（收录于《赫cule·波罗的完整短故事》，2008年）《愚蠢的证人》[1937]《桌上的牌》[1936]《起诉证人及其他故事》 (美国SSC) [1948]《小巷中的谋杀》 (SSC) [1938]《尼罗河上的死亡》[1937]《赛艇之谜与其他故事》 (美国SSC) [1939]《与死亡的约会》[1938]《赫cule·波罗的圣诞节》[1938]《赫cule的劳作》 (SSC) [1947]《伤感的柏树》[1940]《一、二，扣好我的鞋带》[1940]《阳光下的邪恶》[1941]《五只小猪》[1942]《空洞》[1946]《洪水中的人》[1945]《麦金蒂夫人的死亡》[1952]《葬礼之后》[1953]《嘀嗒嘀嗒钟》[1955]《赫cule·波罗与绿岸的愚蠢》[2014]《死者的愚蠢》[1956]《鸽子中的猫》[1959]《哈雷奎因茶具及其他故事》 (美国SSC) [1997]《时钟》[1963]《第三个女孩》[1966]《万圣节派对》[1969]《大象可以记得》[1972]《帷幕：波罗的最后案件》[1975]</p>
+              </div>
+            </div>
+      <!--马普尔小姐系列-->>
+      <section id="MissMarple">
+      <h2><p>马普尔小姐</p>
+      <p>Miss Marple</p></h2>
+      <h5><i>Miss Marple is a white-haired old lady with a gentle, appealing manner — Miss Weatherby is a mixture of vinegar and gush. Of the two Miss Marple is much more dangerous.</i>
+      <p></p>
+      <i>——The Murder at the Vicarage</i>
+      <p></p>
+      <i>马普尔小姐是一位白发苍苍的老太太，举止温柔、迷人——韦瑟比小姐是醋和喷泉的混合物。在这两个人中，马普尔小姐要危险得多。</i>
+      <p></p>
+      <i>——牧师住宅谋杀案</i></h5>
+      <p>马普尔小姐于 1927 年首次出现在《星期二夜总会》中，这是一部短篇小说汇编成《十三个问题》集。它首次发表在 1927 年 12 月号的《皇家杂志》上。克里斯蒂从未预料到马普尔小姐会在公众的喜爱度上与波洛相媲美，但自从 1930 年马普尔的第一部长篇小说《牧师住宅谋杀案》出版以来，读者就被迷住了。</p>
+      <P>---------------------------------------</P>
+    </section>
+    <div class="book-list">
+            <div class="book" id="novel-42">
+              <img src="images/Jacket_TheMurderAtTheVicarage_1.avif" alt="牧师住宅谋杀案">
+              <p>牧师住宅谋杀案</p>
+              <button class="read-btn" data-novel-id="42">开始阅读</button>
+            </div>
+            <div class="book" id="novel-43">
+              <img src="images/Jacket_TheBodyInTheLibrary_1.avif" alt="图书馆中的尸体">
+              <p>图书馆中的尸体</p>
+              <button class="read-btn" data-novel-id="43">开始阅读</button>
+            </div>
+            <div class="book" id="novel-44">
+              <img src="images/Jacket_TheMovingFinger_1.avif" alt="移动的手指">
+              <p>移动的手指</p>
+              <button class="read-btn" data-novel-id="44">开始阅读</button>
+            </div>
+            <div class="book" id="novel-45">
+              <img src="images/Jacket_AMurderIsAnnounced_1.avif" alt="被宣告的谋杀">
+              <p>被宣告的谋杀</p>
+              <button class="read-btn" data-novel-id="45">开始阅读</button>
+            </div>
+            <div class="book" id="novel-46">
+              <img src="images/Jacket_TheyDoItWithMirrors_1.avif" alt="他们用镜子做到">
+              <p>他们用镜子做到</p>
+              <button class="read-btn" data-novel-id="46">开始阅读</button>
+            </div>
+            <div class="book" id="novel-47">
+              <img src="images/Jacket_APocketFullOfRye_1.avif" alt="装满黑麦的口袋">
+              <p>装满黑麦的口袋</p>
+              <button class="read-btn" data-novel-id="47">开始阅读</button>
+            </div>
+            <div class="book" id="novel-48">
+              <img src="images/Jacket_450FromPaddington_1.avif" alt="4：50从帕丁顿出发">
+              <p>4：50从帕丁顿出发</p>
+              <button class="read-btn" data-novel-id="48">开始阅读</button>
+            </div>
+            <div class="book" id="novel-49">
+              <img src="images/Jacket_TheMirrorCrackdFromSideToSide_1.avif" alt="从镜子一边裂到另一边">
+              <p>从镜子一边裂到另一边</p>
+              <button class="read-btn" data-novel-id="49">开始阅读</button>
+            </div>
+            <div class="book" id="novel-50">
+              <img src="images/A_Caribbean_Mystery_1.avif" alt="加勒比海疑案">
+              <p>加勒比海疑案</p>
+              <button class="read-btn" data-novel-id="50">开始阅读</button>
+            </div>
+            <div class="book" id="novel-51">
+              <img src="images/AtBertramsHotel_1.avif" alt="在伯特伦酒店">
+              <p>在伯特伦酒店</p>
+              <button class="read-btn" data-novel-id="51">开始阅读</button>
+            </div>
+            <div class="book" id="novel-52">
+              <img src="images/Nemesis-1.avif" alt="克星">
+              <p>克星</p>
+              <button class="read-btn" data-novel-id="52">开始阅读</button>
+            </div>
+            <div class="book" id="novel-53">
+              <img src="images/SleepingMurder_1.avif" alt="沉睡谋杀">
+              <p>沉睡谋杀</p>
+              <button class="read-btn" data-novel-id="53">开始阅读</button>
+            </div>
+        </div>
+        <section id="pdf-preview">
+          <h2>马尔普小姐系列官方建议阅读顺序</h2>
+          <!--pdf预览图-->
+            <div class="pdf-preview">
+              <img src="images/pdf-marple1 (1).png" alt="建议阅读顺序 页1">
+              <img src="images/pdf-marple1 (2).png" alt="建议阅读顺序 页2">
+            </div>
+          <!--pdf译文-->
+          <b>以下是译文</b>
+          <p>此译文内容为爱好者为爱发电自译，如有问题请发邮件告知与我们谢谢！</p>
+            <div class="pdf-translations">
+              <div class="trans">
+                <b>马尔普小姐阅读清单 英国</b>
+                <p></p>
+                <p>简·马普小姐看起来并不像你典型的侦探，但外表具有欺骗性……她是一位目光犀利的女性，眼中闪烁着智慧的光芒，绝不回避对她在圣玛丽梅德小村庄的邻居们的猜测。这位热衷于正义的侦探，常常只携带着她的针线和一双园艺手套，但她对人性了解颇深。</p>
+                <b>马尔普小姐榜单前五</b>
+                <p></p>
+                <b>图书馆的尸体</b>
+                <p></p>
+                <b>移动的手指</b>
+                <p></p>
+                <b>沉睡谋杀</b>
+                <p></p>
+                <b>被宣告的谋杀</b>
+                <p></p>
+                <b>装满黑麦的口袋</b>
+                <p></p>
+              </div>
+              <div class="trans">
+                <b>——提示——</b>
+                <p>尽管在1976年出版，《沉睡的谋杀》实际上是在第二次世界大战期间写的，描绘了一个比《报应》中更活泼的马普尔小姐。标题《马普尔小姐的最后案件》是一个误称，因为大多数短篇故事实际上是设定在1940年代（并且是在1940年代写的）。《格林肖的愚行》发表在《圣诞布丁的冒险》中。</p>
+              
+                <b>——引用——</b>
+                <p>“我非常普通。一个相当迷糊的普通老太太。当然，这是一种很好的伪装。”——阿加莎·克里斯蒂《复仇女神》</p>
+              </div>
+              <div class="trans">
+                  <b>时间顺序清单如下</b>
+                  <p>以马普尔小姐的生活为阅读这些故事，我们建议以下顺序： 《教区的谋杀》（1930） 《十三个问题》（短篇故事）（1932） 《马普尔小姐的最后案件》（短篇故事）（1979） 《图书馆里的尸体》（1942） 《移动的手指》（1942） 《沉睡的谋杀》（1976） 《谋杀案的宣布》（1950） 《他们用镜子作案》（1952） 《装满黑麦的口袋》（1953） 《格林肖的愚蠢》（1956） 《从帕丁顿出发的4:50》（1957） 《镜子从一侧裂开》（1962） 《加勒比海之谜》（1964） 《在伯特朗酒店》（1965） 《复仇女神》（1971)</p>
+              </div>
+            </div>
+    <!--汤米与塔彭斯-->       
+    <section id="Tommy">
+      <h2><p>汤米与塔彭丝</p>
+      <p>Tommy&Tuppence</p></h2>
+      <h5><i>Young adventurers Limited - willing to do anything, go anywhere - no unreasonable offer refused.</i>
+      <p></p>
+      <i>——The Secret Adversary</i>
+      <p></p>
+      <i>有限的年轻的冒险者-愿意做任何事，去任何地方-不被不合理的提议被拒绝</i>
+      <p></p>
+      <i>——秘密对手</i>
+      </h5>
+      <p>国际间谍、两次世界大战、谋杀、盗窃，更不用说婚姻了，汤米和塔彭斯无论在哪里都在寻找刺激。Tuppence 以她富有魅力的天性引领潮流，而 Tommy 缓慢、深思熟虑的举止则提供了完美的陪衬。他们共同组成了“Young Adventures Limited”，冒险开始了。</p>
+      <P>---------------------------------------</P>
+      </section>
+    <div class="book-list">
+      <div class="book" id="novel-54">
+        <img src="images/The-Secret-Adversary-2.avif"alt="秘密对手">
+        <p>秘密对手</p>
+        <button class="read-btn" data-novel-id="54">开始阅读</button>
+      </div>
+      <div class="book" id="novel-55">
+        <img src="images/N-or-M-2.avif" alt="N或者M？">
+        <p>N或者M？</p>
+        <button class="read-btn" data-novel-id="55">开始阅读</button>
+      </div>
+      <div class="book" id="novel-56">
+        <img src="images/Partners-in-Crime.avif" alt="犯罪伙伴">
+        <p>犯罪伙伴</p>
+        <button class="read-btn" data-novel-id="56">开始阅读</button>
+      </div>
+      <div class="book" id="novel-57">
+          <img src="images/Postern-of-Fate-2.avif"alt="命运的后报">
+          <p>命运的后报</p>
+          <button class="read-btn" data-novel-id="57">开始阅读</button>
+        </div>
+
+    </div>
+    <!--独立作品-->
+    <section id="Standalone">
+      <h2>独立作品</h2>
+      <h4>阿里阿德妮·奥利弗系列</h4>
+      <h5><i>A deal table, her typewriter, black coffee, apples everywhere. What bliss, what glorious and solitary bliss! What a mistake for an author to emerge from her secret fastness. Authors were shy, unsociable creatures, atoning for their lack of social aptitude by inventing their own companions and conversations.</i>
+        <p></p>
+        <i>——Mrs McGinty's Dead</i>
+        <p></p>
+        <i>一张交易桌，她的打字机，黑咖啡，到处都是苹果。多么幸福，多么荣耀和孤独的幸福！对于一个作者来说，从她的秘密坚定中走出来是多么错误啊。作者是害羞、不善交际的动物，通过发明自己的同伴和对话来弥补他们缺乏社交才能。</i>
+        <p></p>
+        <i>——麦金蒂夫人的死</i>  
+      </h5>
+      <p>奥利弗夫人是一位中年妇女和成功的侦探小说家，被描述为“英俊而相当凌乱，有一双漂亮的眼睛，结实的肩膀，还有大量叛逆的白发，她一直在尝试”。她精力充沛，能迅速下结论（有时是对的，有时是错的），并且坚信苏格兰场最好由女性管理。奥利弗夫人还有一位迂腐的侦探，一个名叫斯文·赫尔森的芬兰人。“他当然很白痴，”奥利弗夫人说，“但人们喜欢他”，克里斯蒂经常将这种观点应用于她自己的赫尔克里·波洛。斯文·赫尔森 （Sven Hjerson） 喜欢生菜、冬浴和解开谋杀之谜。</p>
+      <P>---------------------------------------</P>
+    </section>
+      <section class="book-list">
+        <div class="book" id="novel-58">
+          <img src="images/CardsOnTheTable_PB.avif" alt="桌上的牌">
+          <p>桌上的牌</p >
+            <button class="read-btn" data-novel-id="58">开始阅读</button>
+        </div>
+        <div class="book" id="novel-59">
+          <img src="images/Mrs-McGintys-Dead.avif" alt="麦金蒂夫人的死">
+          <p>麦金蒂夫人的死</p>
+          <button class="read-btn" data-novel-id="59">开始阅读</button>
+        </div>
+        <div class="book" id="novel-60">
+          <img src="images/ThePaleHorse.avif"alt="苍白的马">
+          <p>苍白的马</p>
+          <button class="read-btn" data-novel-id="60">开始阅读</button>
+        </div>
+      </section>
+      <!--其他作品-->
+      <h4>其它others</h4>
+      <div class="book-list">
+        <div class="book" id="novel-61">
+          <img src="images/Jacket_TheManInTheBrownSuit-others.avif"alt="穿棕色西装的男人">
+          <p>穿棕色西装的男人</p>
+          <button class="read-btn" data-novel-id="61">开始阅读</button>
+        </div>
+        <div class="book" id="novel-62">
+          <img src="images/Jacket_TheSecretofChimneys--others3.avif"alt="烟囱的秘密">
+          <p>烟囱的秘密</p>
+          <button class="read-btn" data-novel-id="62">开始阅读</button>
+        </div>
+        <div class="book" id="novel-63">
+          <img src="images/The-Seven-Dials-Mystery-3.avif"alt="七表盘之谜">
+          <p>七表盘之谜</p>
+          <button class="read-btn" data-novel-id="63">开始阅读</button>
+        </div>
+        <div class="book" id="novel-64">
+          <img src="images/GiantsBread.avif"alt="巨人的面包">
+          <p>巨人的面包</p>
+          <button class="read-btn" data-novel-id="64">开始阅读</button>
+        </div>
+        <div class="book" id="novel-65">
+          <img src="images/Floating-Admiral-3.avif"alt="漂浮的海军上将">
+          <p>漂浮的海军上将</p>
+          <button class="read-btn" data-novel-id="65">开始阅读</button>
+        </div>
+        <div class="book" id="novel-66">
+          <img src="images/The-Sittaford-Mystery-3.avif"alt="西塔福德之谜">
+          <p>西塔福德之谜</p>
+          <button class="read-btn" data-novel-id="66">开始阅读</button>
+        </div>
+        <div class="book" id="novel-67">
+          <img src="images/Ask-a-policeman-3.avif"alt="问警察">
+          <p>问警察</p>
+          <button class="read-btn" data-novel-id="67">开始阅读</button>
+        </div>
+        <div class="book" id="novel-68">
+          <img src="images/Unfinishedportrait-3.avif"alt="未完成的肖像">
+          <p>未完成的肖像</p>
+          <button class="read-btn" data-novel-id="68">开始阅读</button>
+        </div>
+        <div class="book" id="novel-69">
+          <img src="images/WhyDidntTheyAskEvans-3.avif"alt="为什么他们不问埃文斯">
+          <p>为什么他们不问埃文斯</p>
+          <button class="read-btn" data-novel-id="69">开始阅读</button>
+        </div>
+        <div class="book" id="novel-70">
+          <img src="images/Six-Against-the-Yard-3.avif"alt="六人对院子">
+          <p>六人对院子</p>
+          <button class="read-btn" data-novel-id="70">开始阅读</button>
+        </div>
+        <div class="book" id="novel-71">
+          <img src="images/Jacket_AndThenThereWereNoneUS-3.avif"alt="然后就没有了">
+          <p>然后就没有了</p>
+          <button class="read-btn" data-novel-id="71">开始阅读</button>
+        </div>
+        <div class="book" id="novel-72">
+          <img src="images/Murder-is-Easy-3.avif"alt="谋杀很容易">
+          <p>谋杀很容易</p>
+          <button class="read-btn" data-novel-id="72">开始阅读</button>
+        </div>
+        <div class="book" id="novel-73">
+          <img src="images/Jacket_AbsentInTheSpring-3.avif"alt="春天缺席">
+          <p>春天缺席</p>
+          <button class="read-btn" data-novel-id="73">开始阅读</button>
+        </div>
+        <div class="book" id="novel-74">
+          <img src="images/Death-Comes-as-the-End-3.avif"alt="死亡随处可见">
+          <p>死亡随处可见</p>
+          <button class="read-btn" data-novel-id="74">开始阅读</button>
+        </div>
+        <div class="book" id="novel-75">
+          <img src="images/Towards-Zero-3.avif"alt="走向零">
+          <p>走向零</p>
+          <button class="read-btn" data-novel-id="75">开始阅读</button>
+        </div>
+        <div class="book" id="novel-76">
+          <img src="images/Sparkling-Cyanide-3.avif"alt="闪闪发光的氰化物">
+          <p>闪闪发光的氰化物</p>
+          <button class="read-btn" data-novel-id="76">开始阅读</button>
+        </div>
+        <div class="book" id="novel-77">
+          <img src="images/TheRoseandtheYewTree-3.avif"alt="玫瑰和红豆杉树">
+          <p>玫瑰和红豆杉树</p>
+          <button class="read-btn" data-novel-id="77">开始阅读</button>
+        </div>
+        <div class="book" id="novel-78">
+          <img src="images/Destination-Unknown-3.avif"alt="目的地未知">
+          <p>目的地未知</p>
+          <button class="read-btn" data-novel-id="78">开始阅读</button>
+        </div>
+        <div class="book" id="novel-79">
+          <img src="images/OrdealbyInnocence-3.avif"alt="无辜的磨难">
+          <p>无辜的磨难</p>
+          <button class="read-btn" data-novel-id="79">开始阅读</button>
+        </div>
+        <div class="book" id="novel-80">
+          <img src="images/TheBurden-3.avif"alt="负担">
+          <p>负担</p>
+          <button class="read-btn" data-novel-id="80">开始阅读</button>
+        </div>
+        <div class="book" id="novel-81">
+          <img src="images/Passenger-to-Frankfurt-3.avif"alt="前往法兰克福的乘客">
+          <p>前往法兰克福的乘客</p>
+          <button class="read-btn" data-novel-id="81">开始阅读</button>
+        </div>
+        <div class="book" id="novel-82">
+          <img src="images/Endless-Night-3.avif"alt="无尽的夜晚">
+          <p>无尽的夜晚</p>
+          <button class="read-btn" data-novel-id="82">开始阅读</button>
+        </div>
+        <div class="book" id="novel-83">
+          <img src="images/Spiders-Web-3.avif"alt="蜘蛛网">
+          <p>蜘蛛网</p>
+          <button class="read-btn" data-novel-id="83">开始阅读</button>
+        </div> 
+        <div class="book" id="novel-84">
+          <img src="images/The-Unexpected-Guest-3.avif"alt="不速之客">
+          <p>不速之客</p>
+          <button class="read-btn" data-novel-id="84">开始阅读</button>
+        </div>
+      </div>
+      <!--订阅栏-->
+      <h6>探索更多关于<a href="profile.html">阿加莎详情</a></h6>
+      <section class="newsletter-bar">
+      <div class="newsletter-content">
+          <span class="text">随时了解我们的实时通讯</span>
+          <form action="login.html" method="get" class="newsletter-form">
+              <input type="email" placeholder="请输入邮箱" required>
+              <button type="submit">登录</button>
+          </form>
+      </div>
+    </section>
+    </main>
+
+    <script>document.addEventListener('DOMContentLoaded', function() {
+      // 获取URL中的锚点
+      const hash = window.location.hash;
+      if (hash) {
+          // 直接查找对应ID的元素
+          const targetElement = document.querySelector(hash);
+          
+          if (targetElement) {
+              // 平滑滚动到目标元素
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              
+              // 添加临时高亮效果
+              targetElement.style.transition = 'background-color 0.5s';
+              targetElement.style.backgroundColor = '#ffff99';
+              setTimeout(() => {
+                  targetElement.style.backgroundColor = '';
+              }, 2000);
+          }
+      }
+  });
+  </script>
+  </body>
+  <footer>
+      <p>联系方式: contact@example.com | 电话: 123-456-789</p >
+      <p>如您有其他想了解请关注 阿加莎克里斯蒂公司官网：https://www.agathachristie.com</p>
+      <p>© 2025 AGATHA CHRISTIE. All rights reserved.</p >
+    </footer>
+  </html>

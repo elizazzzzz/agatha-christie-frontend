@@ -1,0 +1,1036 @@
+/* 轮播图容器 */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 70vh;  /* 高度占屏幕的70% */
+  overflow: hidden;
+}
+
+/* 图片 */
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持比例，裁剪填充 */
+  /*display: none;*/
+}
+
+/* 圆点导航 */
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot:hover, .dot.active {
+  background-color: white;
+}
+/* 页眉 */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  color: white;
+  padding: 17px 20px;
+  position: relative;
+  z-index: 10; 
+}
+
+header .logo img {
+  height: 60px;
+}
+/*导航横向排布*/
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 100px;   /* 菜单之间的间距 */
+  margin: 0;
+  padding: 0;
+}
+
+/*下拉菜单容器*/
+nav ul li {
+    position: relative;/*让子菜单相对父级定位*/
+}
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;/*紧贴主菜单*/
+    left: 0;
+    background-color: #222;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+    border-radius: 4px;
+    min-width: 160px;
+    z-index: 20;
+}
+/*下拉菜单的选项*/
+nav ul li .dropdown-menu li a {
+    display: block;
+    padding: 2px 15px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;/*防止换行*/
+    font-size: small;
+}
+nav ul li .dropdown-menu li a:hover{
+    background: #444;
+}
+/*鼠标悬停时显示菜单*/
+nav ul li:hover .dropdown-menu{
+    display: block;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.swiper {
+  width: 100%;
+  height: 70vh; /* 占屏幕 70% 高度 */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 图片自适应裁剪 */
+}
+
+/* 通用样式 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+/*订阅条*/
+
+.newsletter-bar {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.newsletter-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;/*小屏幕时自动换行*/
+}
+.newsletter-content .text {
+    font-size: 18px;
+    font-weight: bold;
+}
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
+}
+.newsletter-form input{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    min-width: 250px;
+    flex: 1;
+}
+.newsletter-form button{
+    padding: 10px 20px;
+    border: none;
+    background: #fff;
+    color: black;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.newsletter-form button:hover {
+    background: #ddd;
+}
+
+/* 主体 */
+main {
+  text-align: center;
+  padding: 20px;
+  
+}
+
+.banner {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* 页脚 */
+footer {
+  background: #444;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+/*login*/
+.login-container {
+    display: flex;/*横向排列*/
+    align-items: center;/*垂直居中*/
+    justify-content: center;/*居中对齐*/
+    gap: 50px;/*图片和表单之间的距离*/
+    max-width:1000px;
+    margin: 50px auto;
+}
+.login-image img {
+    width: 400px;/*调整图片宽度*/
+    border-radius: 8px;/*圆片圆角*/
+}
+.login-form {
+    flex: 1;
+    max-width: 600px;/*占据剩余空间*/
+}
+.login-form input,
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.login-form button {
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.login-form button:hover {
+    background: #333;
+}
+
+/*detail小说库波洛系列*/
+section h2 {
+  background-color: #666;
+  color: #eee;
+  padding: 15px;
+  margin: 40px -20px 20px -20px; /* 向两边拉伸出内容区 */
+}
+/*波洛系列小说grid实现书籍封面排版*/
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+  gap: 30px; /* 卡片间距 */
+  padding: 40px 20;/*上下左右留白*/
+  max-width: 1200px;/*控制书籍区的宽度*/
+  margin:0 auto;/*居中*/
+  background-color: #ccc;
+}
+
+.book {
+  text-align: center;
+}
+
+.book img {
+  width: 100%;
+  max-width: 140px;   /* 限制封面最大宽度 */
+  border-radius: 8px;
+  margin: 0 auto;
+  transition: transform 0.3s;
+}
+
+.book img:hover {
+  transform: scale(1.05);
+}
+
+.book p {
+  margin-top: 10px;
+  font-size: 1em; /* 字体小一点 */
+  color: #222;
+}
+/* 建议阅读顺序标题 */
+.reading-title {
+  text-align: center;
+  background-color: #222;
+  color: #eee;
+  padding: 10px;
+  margin: 40px auto 20px auto;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+/* PDF 图片预览 */
+.pdf-preview {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;   /* 窄屏时自动换行 */
+  margin-bottom: 30px;
+}
+
+.pdf-preview img {
+  width: 30%;        /* 三张并排 */
+  min-width: 200px;  /* 限制图片最小宽度 */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: transform 0.3s ease;/*在初始状态悬停放大声明*/
+}
+/*悬停放大*/
+.pdf-preview img:hover {
+  transform: scale(1.05);
+  overflow: hidden;
+}
+/* 译文区 */
+.pdf-translations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 与 .pdf-images 保持一致 */
+  gap: 28px;
+  max-width: 1100px;
+  margin: 16px auto 40px;
+}
+
+.pdf-translations .trans {
+  background: rgba(0,0,0,0.2);
+  padding: 10px;
+  border-radius: 6px;
+  color: black;
+  line-height: 1.6;
+}
+h4 {
+  background-color: #ccc;
+}
+/*-------------流媒体库-----------*/
+  /*首图*/
+.watch img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持比例，裁剪填充 */
+}
+/*文字*/
+h6 {
+  background-color: #999595;
+  padding: 15px;
+  margin: 49px -20px 20px -20px; /* 向两边拉伸出内容区 */
+  font-size: medium;
+  color: #333;
+  font-style: italic;
+  font-family:Simsun; 
+  }
+  /*左右占比图*/
+  .watch-container {
+    display: flex;/*横向排列*/
+    align-items: center;/*垂直居中*/
+    justify-content: center;/*居中对齐*/
+    gap: 50px;/*图片和文字之间的距离*/
+    max-width:1000px;
+    margin: 50px auto;
+  }
+  .watch-image img {
+    width: 400px;/*调整图片宽度*/
+    }
+  .watch-description{
+    font-size: medium;
+    text-align: left;
+    
+  }
+  .watch-link{
+    text-decoration: none;
+    color: inherit;/*继承父元素的颜色*/
+    display: block;/*块级元素，包裹整个div*/
+  }
+  /* 悬停效果：当鼠标悬停在整个区域时，提供视觉反馈 */
+  .watch-link:hover {
+    opacity: 0.8; /* 降低一点透明度，让用户知道这是可点击的 */
+    color: rgb(117, 16, 41); 
+    scale: 1.05; /* 放大一点 */
+}
+
+/*-----------play游戏库--------------*/
+.play {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.play-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: white; 
+  font-size: large;
+}
+.play-description{
+  text-align: left;
+  margin: 3%;
+  padding: 1%;
+  
+}
+.play-container{
+     display: flex;/*横向排列*/
+    align-items: center;/*垂直居中*/
+    justify-content: center;/*居中对齐*/
+    gap: 30px;/*图片和文字之间的距离*/
+    max-width:800px;
+    margin: 40px auto;
+    
+}
+.play-imgages img{
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+
+}
+.games-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 2px; 
+  padding: 20px;
+  max-width: 760px;
+  margin: 5px auto;
+  background-color: #999595;
+}
+
+.games {
+  text-align: center;
+}
+.games img {
+width: 100%;
+max-width: 40%;
+border-radius: 6px;
+margin: 0 auto;
+transition: transform 0.3s;
+}
+.games img:hover {
+  transform: scale(1.05);
+}
+.games p{
+  margin-top: 5px;
+  font-size: 0.8em;
+  color:#444;
+  text-align:center;
+}
+.a{
+ background-color: #a69691;
+  padding: 10px;
+  margin: 30px -5px 10px -5px; /* 向两边拉伸出内容区 */
+  font-size: medium;
+  color: #333;
+  font-style: italic;
+   font-family:Simsun; 
+}
+/*-------------------profile时间导航-----------*/
+.timeline-nav {
+  background: #f5f5f5;
+  border-bottom: 2px solid #ccc;
+  position: sticky; /* 滚动时固定在顶部 */
+  top: 0;
+  z-index: 1000;
+}
+
+.timeline-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.timeline-nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.timeline-nav li a span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #666;
+}
+
+.timeline-nav li a:hover {
+  color: #b22222; /* 鼠标悬停变红 */
+}
+
+/* 让每个 section 有间距 */
+section {
+  padding: 40px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.profile-container{
+     display: flex;/*横向排列*/
+    align-items: center;/*垂直居中*/
+    justify-content: center;/*居中对齐*/
+    gap: 30px;/*图片和文字之间的距离*/
+    max-width:800px;
+    margin: 40px auto;
+    
+}
+.profile-imgages img{
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+
+}
+.profile-description{
+  text-align: left;
+  margin: 3%;
+  padding: 1%;
+  
+}
+/* -------------------阅读界面样式 ----------*/
+/* 阅读界面覆盖层：全屏半透明背景 */
+.reading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* 半透明黑色背景 */
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 阅读容器：包含标题、内容和底部操作区 */
+.reading-container {
+    background: white;
+    width: 90%;
+    height: 90%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* 阅读界面头部：包含标题和关闭按钮 */
+.reading-header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 阅读内容区域：可滚动的小说内容 */
+.reading-content {
+    flex: 1; /* 占据剩余空间 */
+    overflow-y: auto; /* 垂直滚动 */
+    padding: 20px;
+    font-family: 'Times New Roman', serif; /* 使用衬线字体提高阅读体验 */
+    line-height: 1.6; /* 行高设置，提高可读性 */
+}
+
+/* 保持文本格式的pre标签样式 */
+.reading-content pre {
+    white-space: pre-wrap; /* 保持空格和换行，但允许自动换行 */
+    font-family: inherit; /* 继承父元素字体 */
+    margin: 0; /* 移除默认边距 */
+}
+
+/* 阅读界面底部：预留功能按钮区域 */
+.reading-footer {
+    background: #f5f5f5;
+    padding: 15px;
+    text-align: right;
+}
+
+/* 关闭按钮样式 */
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 阅读按钮样式：添加到每本书上的按钮 */
+.read-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* 阅读按钮悬停效果 */
+.read-btn:hover {
+    background: #555;
+}
+/*----------- 播放器样式------------ */
+.screening-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #312d2d; /* 整体深灰色背景 */
+    color: #f5f5f5; /* 浅色字体，与背景形成对比 */
+    line-height: 1.6;
+}
+
+.section-title, .video-title {
+    font-size: 1.5em; /* 标题字号 */
+    font-weight: bold; /* 字体加粗 */
+    margin: 0 0 10px 0; /* 下方留白 */
+    color: #fff; /* 字体颜色 */
+}
+
+/*----------- 顶部导航栏样式 ------------*/
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-middle {
+    flex-grow: 1; /* 中间区域自动填充剩余空间 */
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.nav-btn:hover {
+    color: #ff4500;
+}
+
+.search-box {
+    display: flex;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 5px;
+    width: 60%;
+    max-width: 400px;
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    color: #f5f5f5;
+    padding: 5px 10px;
+    outline: none;
+    flex-grow: 1;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+
+/* 占位符图标， Unicode 字符 */
+.icon-back::before { content: '←'; }
+.icon-home::before { content: '🏠'; }
+.icon-history::before { content: '⏱️'; }
+.icon-star::before { content: '⭐'; }
+.icon-service::before { content: '📞'; }
+.icon-message::before { content: '✉️'; }
+.icon-user::before { content: '👤'; }
+
+
+/*----------- 主体页面布局：左 4/5，右 1/5 ------------*/
+.player-page-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 20px;
+    
+}
+
+.main-layout-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+/* 整体播放器布局：左右对齐 */
+.player-wrapper {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* 横向容器：视频 + 右侧信息 */
+.player-container {
+  display: flex;
+  gap: 24px;
+  align-items: stretch; /* 使 info-area 拉伸到视频高度 */
+  height: 85vh; /* 视频高度 */
+}
+
+/* 左边 video */
+.video-area {
+  flex: 4;
+  background: #000;
+  border-radius: 8px;
+  position:relative;
+  height: 100%;
+}
+
+.video-area video {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#main-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover; /*保持比例，裁剪填充*/
+  position: static;  /* 让视频在整个播放器区域内 */
+}
+
+/* 选集列表样式 */
+.episode-list-wrapper {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.episode-list-wrapper .section-title {
+    margin-top: 0;
+  }
+
+  .episode-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.episode-item {
+    background-color: #2a2a2a;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #ccc;
+}
+
+.episode-item:hover,
+.episode-item.active {
+    background-color: #ff4500;
+    color: white;
+}
+
+/*----------- 右侧信息栏样式 ------------*/
+/* 右边 信息栏 */
+.info-area {
+  flex: 1;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  overflow-y: auto;   /* 内容多时独立滚动 */
+  max-height: 85vh;   /* 和视频同高 */
+  top: 70px; /* 导航栏高度 */
+}
+
+.sidebar-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    color: #888;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.tab-button.active {
+    color: #fff;
+    border-bottom: 2px solid #ff4500;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 详情卡片样式 */
+.details-card {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    align-items: flex-start;
+}
+
+.details-card img {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.details-text .video-title {
+    margin: 0 0 5px;
+}
+
+.details-text p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* 演职员表样式 */
+.cast-list {
+    margin-top: 20px;
+}
+
+.cast-list .section-title {
+    margin-bottom: 10px;
+}
+
+.cast-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* 演员过多时可横向滚动 */
+    padding-bottom: 10px;
+}
+
+.cast-member {
+    flex-shrink: 0;
+    width: 80px;
+    text-align: center;
+}
+
+.cast-member img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cast-member p {
+    margin: 5px 0 0;
+    font-size: 0.8em;
+    color: #ccc;
+}
+/* 评论列表样式 */
+.comment-list {
+    margin-top: 20px;
+}
+
+.comment-list .section-title {
+    margin-bottom: 10px;
+}
+
+.comment-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #ccc;
+}
+
+.comment-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.comment-item p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.comment-item span {
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* 评论输入框样式 */
+.comment-input-wrapper {
+    margin-top: 20px;
+    display: flex; /* 启用 Flexbox 布局 */
+  align-items: center; /* 垂直居中对齐输入框和按钮 */
+}
+
+  .comment-input-wrapper input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2a2a2a;
+    color: #ccc;
+    font-size: 0.9em;
+    resize: none;
+    flex-grow: 1; /* 让输入框占据所有可用空间 */
+    margin-right: 10px; /* 在输入框和按钮之间添加一些间距 */
+}
+
+.comment-input-wrapper button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    flex-shrink: 0; /* 防止按钮被压缩 */
+}
+
+.comment-input-wrapper button:hover {
+    background-color: #ff6347;
+  }
+  /*---------影评样式--------*/
+  /*评分输入容器*/
+  .rating-input-wrapper {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  text-align: center;
+}
+/* 星级选择区域 */
+.stars-selection {
+  display: inline-block; /* 确保星级居中对齐 */
+  margin: 10px 0;
+  font-size: 2em; /* 星级图标的尺寸 */
+}
+/* 单个星星 */
+.star {
+  color: #555; /* 默认的灰色，未选中状态 */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+/* 选中或悬停时的星星颜色 */
+.star.active,
+.star:hover {
+  color: #ffcc00; /* 亮黄色 */
+}
+
+/* 提交按钮 */
+.submit-btn {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #ff6347;
+}
+/*提交成功提示条toast*/
+.toast-container {
+    position: fixed; /* 固定在视口中 */
+    bottom: 20px; /* 距离底部 20px */
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    min-width: 250px;
+    text-align: center;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+
+
+/* ---------猜你想看-------*/
+.recommend-area {
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.recommend-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.recommend-list img {
+  width: 100%;
+  border-radius: 6px;
+}

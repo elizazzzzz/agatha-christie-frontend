@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线播放 - 电影/电视剧在线观看</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="screening-page">
+
+    <div class="top-nav">
+        <div class="nav-left">
+        <a href="watch.html" class="nav-btn"><i class="icon-back"></i> 返回</a>
+        <a href="index.html" class="nav-btn"><i class="icon-home"></i> 主页</a>
+        </div>
+        <div class="nav-middle">
+            <div class="search-box">
+                <input type="text" placeholder="搜索影片...">
+                <button>🔍</button>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn"><i class="icon-history"></i> 历史</button>
+            <button class="nav-btn"><i class="icon-star"></i> 收藏</button>
+            <button class="nav-btn"><i class="icon-service"></i> 客服</button>
+            <button class="nav-btn"><i class="icon-message"></i> 消息</button>
+            <a href="login.html" class="nav-btn"><i class="icon-user"></i> 登录</a>
+        </div>
+    </div>
+<main class="player-wrapper">
+  <div class="player-container">
+    <!-- 左：视频（视频决定高度） -->
+    <div class="video-area">
+      <div class="video-player-wrapper">
+        <video id="main-video" controls poster="images/WATCH-TowardsZeroKA.avif"></video>
+      </div>
+    
+    </div>
+
+    <!-- 右：固定宽度的信息区（详情 / 影评 / 讨论）-->
+    <aside class="info-area" aria-labelledby="details-title">
+      <div class="sidebar-tabs">
+        <button id="tab-details" class="tab-button active">详情</button>
+        <button id="tab-reviews" class="tab-button">影评</button>
+        <button id="tab-discussions" class="tab-button">讨论</button>
+      </div>
+
+      <!-- 这个区域会跟视频等高并内部滚动 -->
+      <div class="tab-body">
+        <div id="tab-content-details" class="tab-content active">
+          <div class="details-card">
+            <img id="details-poster" src="" alt="影片封面">
+            <div class="details-text">
+              <div class="section-title" id="details-title"></div>
+              <p id="details-metadata"></p>
+              <p id="details-summary"></p>
+            </div>
+          </div>
+
+          <div class="·cast-list">
+            <div class="section-title">主要演员</div>
+            <div class="cast-grid"></div>
+          </div>
+        </div>
+
+        <div id="tab-content-reviews" class="tab-content">
+  <div class="rating-summary">
+    <div class="section-title">用户评分</div>
+    <div class="avg-rating" style="margin-bottom:8px; color:#fff;">
+      正在加载评分...
+    </div>
+  </div>
+  <ul id="review-container" class="review-list"></ul>
+  
+  <div class="rating-input-wrapper">
+    <div class="section-title">提交你的评分</div>
+    <div class="stars-selection">
+      <span class="star" data-value="1">★</span>
+      <span class="star" data-value="2">★</span>
+      <span class="star" data-value="3">★</span>
+      <span class="star" data-value="4">★</span>
+      <span class="star" data-value="5">★</span>
+    </div>
+    <button id="submit-rating-btn" class="submit-btn">提交评分</button>
+  </div>
+</div>
+
+
+ <div id="toast-container" class="toast-container"></div>
+        <div id="tab-content-discussions" class="tab-content">
+          <div class="section-title">讨论区</div>
+            <div class="comment-input-wrapper">
+            <input type="text" id="comment-input" placeholder="写下你的评论..." />
+            <button id="comment-submit">提交</button>
+          </div>
+          <div class="comment-list"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <!-- 选集列表 -->
+  <div class="episode-list-wrapper">
+        <div class="section-title">选集</div>
+        <ul class="episode-list"></ul>
+      </div>
+  <!-- 猜你想看（页面继续往下） -->
+  <div class="recommend-area"> 
+    <div class="section-title">猜你想看</div>
+    <div class="recommend-list">
+      <div class="recommend-item">影片推荐 1</div>
+      <div class="recommend-item">影片推荐 2</div>
+      <div class="recommend-item">影片推荐 3</div>
+    </div>
+  </div>
+</main>
+
+
+
+    <section class="newsletter-bar">
+        <div class="newsletter-content">
+            <span class="text">随时了解我们的实时通讯</span>
+            <form action="login.html" method="get" class="newsletter-form">
+                <input type="email" placeholder="请输入邮箱" required>
+                <button type="submit">登录</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>联系方式: contact@example.com | 电话: 123-456-789</p>
+        <p>如您有其他想了解请关注 阿加莎克里斯蒂公司官网：https://www.agathachristie.com</p>
+        <p>© 2025 AGATHA CHRISTIE. All rights reserved.</p>
+    </footer>
+</body>
+ <script src="js/script.js" defer></script>
+</html>

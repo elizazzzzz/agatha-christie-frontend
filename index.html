@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agatha Christie - 首页</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Swiper 样式 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<!-- Swiper 脚本 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<body>
+  <!-- 页眉 -->
+  <header>
+    <div class="logo">
+      <img src="images/tubiao.png" alt="Agatha Christie Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">首页</a ></li>
+         <li class="dropdown">
+            <a href="play.html">游戏库</a >
+            <ul class="dropdown-menu">
+                <li><a href="play.html">拼图游戏</a></li>
+                <li><a href="play.html">解谜书</a></li>
+                <li><a href="play.html">PC和主机游戏</a></li>
+                <li><a href="play.html">棋盘游戏和纸牌</a></li>
+            </ul>
+        </li>
+        <!--小说库＋悬浮菜单-->
+        <li class="dropdown">
+            <a href="detail.html">小说库</a >
+            <ul class="dropdown-menu">
+                <li><a href="detail.html#Hercule">波洛系列</a></li>
+                <li><a href="detail.html#MissMarple">马普尔小姐</a></li>
+                <li><a href="detail.html#Tommy">汤姆与塔彭丝</a></li>
+                <li><a href="detail.html#Standalone">独立系列</a></li>
+            </ul>
+        </li>
+        <!--流媒体库＋悬浮菜单-->
+        <li class="dropdown">
+            <a href="watch.html">流媒体库</a>
+            <ul class="dropdown-menu">
+                <li><a href="watch.html#now">热映</a></li>
+                <li><a href="watch.html#willing">即将推出</a></li>
+                <li><a href="watch.html#production">生产中</a></li>
+                <li><a href="watch.html#new">最新版本</a></li>
+                <li><a href="watch.html#20century">20世纪</a></li>
+                <li><a href="watch.html#world">世界各地</a></li>
+                <li><a href="watch.html#contemporary">当代科视Christie</a></li>
+                <li><a href="watch.html#studio">20世纪工作室</a></li>
+                <li><a href="watch.html#classic">经典科视Christie</a></li>
+            </ul>
+        </li>
+        <li><a href="profile.html">阿加莎详情</a ></li>
+      </ul>
+    </nav>
+    <!--搜索框-->
+ <div class="search-box">
+  <input type="text" placeholder="搜索...">
+  <button>🔍</button>
+</div>
+    </header>
+   <!-- 轮播图 -->
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="images/index1.avif" alt="index1"></div>
+    <div class="swiper-slide"><img src="images/index2.avif" alt="index2"></div>
+    <div class="swiper-slide"><img src="images/index3.avif" alt="index3"></div>
+  </div>
+  <!-- 分页器 -->
+  <div class="swiper-pagination"></div>
+  <!-- 左右导航按钮 -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+      <!-- 圆点导航 -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  </div>
+  <section class="newsletter-bar">
+    <div class="newsletter-content">
+        <span class="text">随时了解我们的实时通讯</span>
+        <form action="login.html" method="get" class="newsletter-form">
+            <input type="email" placeholder="请输入邮箱" required>
+            <button type="submit">登录</button>
+        </form>
+    </div>
+   </section>
+  <!-- 主要内容 -->
+  <main>
+    <h1>欢迎来到阿加莎·克里斯蒂的世界</h1>
+    <p>探索推理女王的小说、影视和游戏资源。</p >
+    <img src="images/index4.avif" alt="Banner" class="banner">
+  </main>
+
+  <!-- 页脚 -->
+  <footer>
+    <p>联系方式: contact@example.com | 电话: 123-456-789</p >
+          <p>如您有其他想了解请关注 阿加莎克里斯蒂公司官网：https://www.agathachristie.com</p>
+    <p>© 2025 AGATHA CHRISTIE. All rights reserved.</p >
+  </footer>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true, // 循环播放
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false, // 用户操作后继续自动播放
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true, // 小圆点可点
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
